@@ -13,7 +13,7 @@ const CreateAndInit = () => {
 }
 
 const InitRequest = async (dir) => {
-  await Axios.get(`http://127.0.0.1:8000/git/init?path=${dir}`)
+  await Axios.post(`http://127.0.0.1:8000/git/init/`, {path: dir})
     .then(function (response) {
       // handle success
       console.log(response);

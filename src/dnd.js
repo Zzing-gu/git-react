@@ -29,7 +29,7 @@ export default function MyDropzone() {
 
 
 
-        await Axios.put(`http://127.0.0.1:8000/git/test/`, formData, config)
+        await Axios.put(`http://127.0.0.1:8000/git/add/`, formData, config)
             .then(function (response) {
                 // handle success
                 console.log(response);
@@ -50,7 +50,6 @@ export default function MyDropzone() {
 
     return (
         <div {...getRootProps()}>
-            <input type="file" id="image_uploads" name="image_uploads" ></input>
             <input {...getInputProps()} />
             {
                 isDragActive ?
